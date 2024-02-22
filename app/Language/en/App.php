@@ -297,4 +297,49 @@ $lang['language'] = "Language";
 $lang['default_lang'] = "Default Language";
 $lang['blank_page'] = "Blank Page";
 
+
+/**
+ * Products
+ */
+$lang['email_templates'] = "Email Templates";
+$lang['settings_company_name'] = "Company Name";
+$lang['settings_company_email'] = "Company Email";
+$lang['settings_timezone'] = "Timezone";
+$lang['settings_date_format'] = "Date Format";
+$lang['settings_datetime_format'] = "DateTime Format";
+$lang['settings_g_recaptcha'] = "Google Recaptcha";
+$lang['settings_gr_sitekey'] = "Site Key";
+$lang['settings_gr_secretkey'] = "Secret Key";
+$lang['settings_email_code'] = "Code";
+$lang['settings_email_name'] = "Name";
+$lang['edit'] = "Edit";
+$lang['settings_email_template'] = "Template";
+$lang['settings_timezone'] = "Timezone";
+
+$lang['language'] = "Language";
+$lang['default_lang'] = "Default Language";
+$lang['blank_page'] = "Blank Page";
+
+/**
+ * Nav Bar
+ */
+$lang['items'] = "Items";
+$lang['sales'] = "Sales";
+$lang['customers'] = "Customers";
+$lang['requirement_forms'] = "Requirement forms";
+$lang['recommended_pricing'] = "Recommended Pricing";
+$lang['estimates'] = "Estimates";
+$lang['sales_orders'] = "Sales Orders";
+$lang['invoices'] = "Invoices";
+$lang['purchases'] = "Purchases";
+$lang['suplliers'] = "Suplliers";
+$lang['purchase_orders'] = "Purchase Orders";
+$lang['bill'] = "Bills";
+$lang['settings'] = "Settings";
+$lang['users_and_roles'] = "Users and roles";
+$lang['log_out'] = "Log out";
+
+$lang['language'] = "Language";
+$lang['default_lang'] = "Default Language";
+$lang['blank_page'] = "Blank Page";
 return $lang;

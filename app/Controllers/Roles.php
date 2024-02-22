@@ -1,7 +1,7 @@
 <?php
-namespace App\Controllers\Admin;
+namespace App\Controllers;
 
-use App\Controllers\Admin\AdminBaseController;
+use App\Controllers\AdminBaseController;
 use App\Models\RoleModel;
 use App\Models\RolePermissionModel;
 

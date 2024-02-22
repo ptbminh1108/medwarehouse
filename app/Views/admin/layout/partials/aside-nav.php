@@ -1,109 +1,140 @@
 <!-- Sidebar Menu -->
 <nav class="mt-2">
 
-<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-
-<li class="nav-item">
-    <a href="<?php echo url('admin/dashboard') ?>" class="nav-link <?php echo (@$_page->menu=='dashboard')?'active':'' ?>">
-      <i class="nav-icon fas fa-tachometer-alt"></i>
-      <p>
-        <?php echo lang('App.dashboard') ?>
-      </p>
-    </a>
-  </li>
-
-  <?php if (hasPermissions('users_list')): ?>
+    <!-- Dashboard Tab -->
     <li class="nav-item">
-      <a href="<?php echo url('admin/users') ?>" class="nav-link <?php echo (@$_page->menu=='users')?'active':'' ?>">
-        <i class="nav-icon fas fa-user"></i>
+      <a href="<?php echo url('dashboard') ?>" class="nav-link <?php echo (@$_page->menu == 'dashboard') ? 'active' : '' ?>">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
         <p>
-        <?php echo lang('App.users') ?>
+          <?php echo lang('App.dashboard') ?>
         </p>
       </a>
     </li>
-  <?php endif ?>
+    <!-- Dashboard Tab -->  
 
-  <?php if (hasPermissions('activity_log_list')): ?>
-    <li class="nav-item">
-      <a href="<?php echo url('admin/activityLogs') ?>" class="nav-link <?php echo (@$_page->menu=='activity_logs')?'active':'' ?>">
-        <i class="nav-icon fas fa-history"></i>
-        <p>
-        <?php echo lang('App.activity_logs') ?>
-        </p>
-      </a>
-    </li>
-  <?php endif ?>
-
-  <?php if (hasPermissions('roles_list')): ?>
-    <li class="nav-item">
-      <a href="<?php echo url('admin/roles') ?>" class="nav-link <?php echo (@$_page->menu=='roles')?'active':'' ?>">
-        <i class="nav-icon fas fa-lock"></i>
-        <p>
-        <?php echo lang('App.manage_roles') ?>
-        </p>
-      </a>
-    </li>
-  <?php endif ?>
-
-  <?php if (hasPermissions('permissions_list')): ?>
-    <li class="nav-item">
-      <a href="<?php echo url('admin/permissions') ?>" class="nav-link <?php echo (@$_page->menu=='permissions')?'active':'' ?>">
-        <i class="nav-icon fas fa-user"></i>
-        <p>
-        <?php echo lang('App.manage_permissions') ?>
-        </p>
-      </a>
-    </li>
-  <?php endif ?>
-
-
-  <?php if (hasPermissions('backup_db')): ?>
-    <li class="nav-item">
-      <a href="<?php echo url('admin/backup') ?>" class="nav-link <?php echo (@$_page->menu=='backup')?'active':'' ?>">
-        <i class="nav-icon fas fa-database"></i>
-        <p>
-        <?php echo lang('App.backup') ?>
-        </p>
-      </a>
-    </li>
-  <?php endif ?>
-
-  <?php if ( hasPermissions('company_settings') ): ?>
-  <li class="nav-item has-treeview <?php echo (@$_page->menu=='settings')?'menu-open':'' ?>">
-    <a href="#" class="nav-link  <?php echo (@$_page->menu=='settings')?'active':'' ?>">
-      <i class="nav-icon fas fa-cog"></i>
-      <p>
-      <?php echo lang('App.settings') ?>
-        <i class="right fas fa-angle-left"></i>
-      </p>
-    </a>
-    <ul class="nav nav-treeview">
-    <li class="nav-item">
-        <a href="<?php echo url('admin/settings/general') ?>" class="nav-link <?php echo (@$_page->submenu=='general')?'active':'' ?>">
-          <i class="far fa-circle nav-icon"></i> <p> <?php echo lang('App.general_setings') ?> </p>
-        </a>
-      </li>
-
+    <!-- Items Tab -->  
+    <?php if (hasPermissions('users_list')) : ?>
       <li class="nav-item">
-        <a href="<?php echo url('admin/settings/company') ?>" class="nav-link <?php echo (@$_page->submenu=='company')?'active':'' ?>">
-          <i class="far fa-circle nav-icon"></i> <p>  <?php echo lang('App.company_setings') ?> </p>
+        <a href="<?php echo url('items') ?>" class="nav-link <?php echo (@$_page->menu == 'items') ? 'active' : '' ?>">
+          <i class="nav-icon fas fa-user"></i>
+          <p>
+            <?php echo lang('App.items') ?>
+            <i class="right fas fa-angle-right"></i>
+          </p>
         </a>
       </li>
+    <?php endif ?>
+    <!-- Items Tab -->  
 
+    <!-- Sales Tab -->  
+    <?php if (hasPermissions('activity_log_list')) : ?>
       <li class="nav-item">
-        <a href="<?php echo url('admin/settings/email_templates') ?>" class="nav-link <?php echo (@$_page->submenu=='email_templates')?'active':'' ?>">
-          <i class="far fa-circle nav-icon"></i> <p> <?php echo lang('App.manage_email_template') ?></p>
+        <a href="<?php echo url('activityLogs') ?>" class="nav-link <?php echo (@$_page->menu == 'activity_logs') ? 'active' : '' ?>">
+          <i class="nav-icon fas fa-history"></i>
+          <p>
+            <?php echo lang('App.sales') ?>
+            <i class="right fas fa-angle-right"></i>
+          </p>
+        </a>
+
+       
+        <ul class="nav nav-treeview">
+
+          <!-- Customer sub Tab -->  
+          <li class="nav-item">
+            <a href="<?php echo url('customers') ?>" class="nav-link <?php echo (@$_page->submenu == 'general') ? 'active' : '' ?>">
+              <i class="far fa-circle nav-icon"></i>
+              <p> <?php echo lang('App.customers') ?> </p>
+            </a>
+          </li>
+          <!-- Customer sub Tab -->  
+
+          <!-- Requirement forms sub Tab -->  
+          <li class="nav-item">
+            <a href="<?php echo url('customers') ?>" class="nav-link <?php echo (@$_page->submenu == 'general') ? 'active' : '' ?>">
+              <i class="far fa-circle nav-icon"></i>
+              <p> <?php echo lang('App.requirement_forms') ?> </p>
+            </a>
+          </li>
+          <!-- Requirement forms sub Tab -->  
+
+        </ul>
+      </li>
+    <?php endif ?>
+    <!-- Sales Tab -->  
+    
+    <!-- Purchases Tab -->  
+        <?php if (hasPermissions('users_list')) : ?>
+      <li class="nav-item">
+        <a href="<?php echo url('purchases') ?>" class="nav-link <?php echo (@$_page->menu == 'purchases') ? 'active' : '' ?>">
+          <i class="nav-icon fas fa-money-bill"></i>
+          <p>
+            <?php echo lang('App.purchases') ?>
+            <i class="right fas fa-angle-right"></i>
+          </p>
         </a>
       </li>
-    </ul>
-  </li>
-  <?php endif ?>
-  
-  <?php if(hasModule('adminlte')): ?>
-    <?= $this->include("Adminlte\Views\aside-nav") ?>
-  <?php endif; ?>
+    <?php endif ?>
+    <!-- Purchases Tab -->  
 
-</ul>
+     <!-- Settings Tab -->  
+     <?php if (hasPermissions('users_list')) : ?>
+      <li class="nav-item">
+        <a href="<?php echo url('items') ?>" class="nav-link <?php echo (@$_page->menu == 'settings') ? 'active' : '' ?>">
+          <i class="nav-icon fas fa-cog"></i>
+          <p>
+            <?php echo lang('App.settings') ?>
+            <i class="right fas fa-angle-right"></i>
+          </p>
+        </a>
+
+        <ul class="nav nav-treeview">
+
+          <!-- User sub Tab -->  
+          <li class="nav-item">
+            <a href="<?php echo url('users') ?>" class="nav-link <?php echo (@$_page->submenu == 'users') ? 'active' : '' ?>">
+              <i class="far fa-user "></i>
+              <p> <?php echo lang('App.users') ?> </p>
+            </a>
+          </li>
+          <!-- Customer sub Tab -->  
+
+          <!-- Roles forms sub Tab -->  
+          <li class="nav-item">
+            <a href="<?php echo url('roles') ?>" class="nav-link <?php echo (@$_page->submenu == 'roles') ? 'active' : '' ?>">
+              <i class="far fa-user"></i>
+              <p> <?php echo lang('App.roles')?> </p>
+            </a>
+          </li>
+          <!-- Roles forms sub Tab -->  
+
+        </ul>
+
+      </li>
+    <?php endif ?>
+    <!-- Settings Tab -->  
+
+
+     <!-- Logouts Tab -->  
+     <?php if (hasPermissions('users_list')) : ?>
+      <li class="nav-item">
+        <a href="<?php echo url('auth/logout') ?>" class="nav-link">
+          <i class="nav-icon fas fa-sign-out-alt"></i>
+          <p>
+            <?php echo lang('App.log_out') ?>
+            <i class="right fas fa-angle-right"></i>
+          </p>
+        </a>
+      </li>
+    <?php endif ?>
+    <!-- Logouts Tab -->  
+
+    <?php if (!hasModule('adminlte')) : ?>
+      <?= $this->include("Adminlte\Views\aside-nav") ?>
+    <?php endif; ?>
+
+  </ul>
 </nav>
 <!-- /.sidebar-menu -->

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Controllers\AdminBaseController;
+use App\ControllersBaseController;
 
 class Errors extends BaseController
 {

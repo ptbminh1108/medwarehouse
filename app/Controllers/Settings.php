@@ -1,7 +1,7 @@
 <?php
-namespace App\Controllers\Admin;
+namespace App\Controllers;
 
-use App\Controllers\Admin\AdminBaseController;
+use App\ControllersBaseController;
 use App\Models\SettingModel;
 use App\Models\EmailTemplateModel;
 

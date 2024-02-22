@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers;
 
-use App\Controllers\Admin\AdminBaseController;
+use App\Controllers\AdminBaseController;
 
 class Dashboard extends AdminBaseController
 {
