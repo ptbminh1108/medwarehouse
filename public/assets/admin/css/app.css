@@ -9,3 +9,56 @@ body {
     overflow-y: auto;
     /* font-size: 12px */
 }
+
+.form-register{
+    width: 1200px;
+}
+
+#register-form .card-title {
+    font-size: 28px;
+}
+
+#register-form .btn-get-started{
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+    background-color: black;
+    color: white;
+}
+
+#register-form .btn-cancel{
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+}
+#register-form .hidden{
+    display: none;
+}
+
+.round-cirle{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(216 228 238);
+    font-size: 20px;
+    color:black;
+    text-align: center;
+    line-height: 2.5;
+    border-radius: 100%;
+}
+
+.header-step-title{
+    line-height: 3;
+    border-right: 2px solid rgb(216 228 238);
+}
+
+.header-step-title.final{
+    line-height: 3;
+    border-right: none !important;
+}
+#register-header-step{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}

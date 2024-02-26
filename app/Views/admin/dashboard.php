@@ -20,7 +20,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content"  style="display: none;">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">

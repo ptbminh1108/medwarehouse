@@ -4,6 +4,8 @@ $lang['info'] = [
     'send' => 'Send'
 ];
 
+$lang['company'] = "Track Circle";
+
 /**
  * Login, Profile & Other Pages like password reset
  */
@@ -334,6 +336,8 @@ $lang['invoices'] = "Invoices";
 $lang['purchases'] = "Purchases";
 $lang['suplliers'] = "Suplliers";
 $lang['purchase_orders'] = "Purchase Orders";
+$lang['register'] = "Register Form";
+
 $lang['bill'] = "Bills";
 $lang['settings'] = "Settings";
 $lang['users_and_roles'] = "Users and roles";
@@ -342,4 +346,22 @@ $lang['log_out'] = "Log out";
 $lang['language'] = "Language";
 $lang['default_lang'] = "Default Language";
 $lang['blank_page'] = "Blank Page";
+
+/**
+ * Register Form 
+ */
+$lang['register_title'] = "Register Form";
+$lang['register_step_1_title'] = "Sign up for a Trackcircle account as a Super Administrator";
+$lang['register_step_2_title'] = "Personal details for Super Administrator";
+$lang['register_step_3_title'] = "Confirm Password";
+
+$lang['register_get_started'] = "Get Started";
+$lang['register_back'] = "Back";
+$lang['register_next'] = "Next";
+$lang['register_submit'] = "Submit";
+
+
+$lang['register_cancel'] = "Cancel";
+
 return $lang;
+

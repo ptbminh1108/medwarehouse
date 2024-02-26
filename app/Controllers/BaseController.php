@@ -53,4 +53,12 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         $this->session = \Config\Services::session();
     }
+
+
+    public function responseJson($array){
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(500)
+            ->set_output(json_encode($array));
+    }
 }

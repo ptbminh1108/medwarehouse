@@ -17,7 +17,7 @@
     <!-- Items Tab -->  
     <?php if (hasPermissions('users_list')) : ?>
       <li class="nav-item">
-        <a href="<?php echo url('items') ?>" class="nav-link <?php echo (@$_page->menu == 'items') ? 'active' : '' ?>">
+        <a href="<?php echo url('#') ?>" class="nav-link <?php echo (@$_page->menu == 'items') ? 'active' : '' ?>">
           <i class="nav-icon fas fa-user"></i>
           <p>
             <?php echo lang('App.items') ?>
@@ -31,7 +31,7 @@
     <!-- Sales Tab -->  
     <?php if (hasPermissions('activity_log_list')) : ?>
       <li class="nav-item">
-        <a href="<?php echo url('activityLogs') ?>" class="nav-link <?php echo (@$_page->menu == 'activity_logs') ? 'active' : '' ?>">
+        <a href="<?php echo url('#') ?>" class="nav-link <?php echo (@$_page->menu == 'activity_logs') ? 'active' : '' ?>">
           <i class="nav-icon fas fa-history"></i>
           <p>
             <?php echo lang('App.sales') ?>
@@ -44,7 +44,7 @@
 
           <!-- Customer sub Tab -->  
           <li class="nav-item">
-            <a href="<?php echo url('customers') ?>" class="nav-link <?php echo (@$_page->submenu == 'general') ? 'active' : '' ?>">
+            <a href="<?php echo url('#') ?>" class="nav-link <?php echo (@$_page->submenu == 'general') ? 'active' : '' ?>">
               <i class="far fa-circle nav-icon"></i>
               <p> <?php echo lang('App.customers') ?> </p>
             </a>
@@ -53,7 +53,7 @@
 
           <!-- Requirement forms sub Tab -->  
           <li class="nav-item">
-            <a href="<?php echo url('customers') ?>" class="nav-link <?php echo (@$_page->submenu == 'general') ? 'active' : '' ?>">
+            <a href="<?php echo url('#') ?>" class="nav-link <?php echo (@$_page->submenu == 'general') ? 'active' : '' ?>">
               <i class="far fa-circle nav-icon"></i>
               <p> <?php echo lang('App.requirement_forms') ?> </p>
             </a>
@@ -68,7 +68,7 @@
     <!-- Purchases Tab -->  
         <?php if (hasPermissions('users_list')) : ?>
       <li class="nav-item">
-        <a href="<?php echo url('purchases') ?>" class="nav-link <?php echo (@$_page->menu == 'purchases') ? 'active' : '' ?>">
+        <a href="<?php echo url('#') ?>" class="nav-link <?php echo (@$_page->menu == 'purchases') ? 'active' : '' ?>">
           <i class="nav-icon fas fa-money-bill"></i>
           <p>
             <?php echo lang('App.purchases') ?>
@@ -82,7 +82,7 @@
      <!-- Settings Tab -->  
      <?php if (hasPermissions('users_list')) : ?>
       <li class="nav-item">
-        <a href="<?php echo url('items') ?>" class="nav-link <?php echo (@$_page->menu == 'settings') ? 'active' : '' ?>">
+        <a href="<?php echo url('#') ?>" class="nav-link <?php echo (@$_page->menu == 'settings') ? 'active' : '' ?>">
           <i class="nav-icon fas fa-cog"></i>
           <p>
             <?php echo lang('App.settings') ?>
@@ -109,6 +109,14 @@
             </a>
           </li>
           <!-- Roles forms sub Tab -->  
+          <!-- Register forms sub Tab -->  
+           <li class="nav-item">
+            <a href="<?php echo url('auth/register') ?>" class="nav-link <?php echo (@$_page->submenu == 'register') ? 'active' : '' ?>">
+              <i class="far fa-user"></i>
+              <p> <?php echo lang('App.register')?> </p>
+            </a>
+          </li>
+          <!-- Register forms sub Tab -->  
 
         </ul>
 

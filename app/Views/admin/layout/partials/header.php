@@ -11,7 +11,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<?php echo base_url('') ?>" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -203,9 +203,10 @@
     </a> -->
     <!-- Brand Logo -->
     <a href="<?php echo url('/') ?>" class="brand-link bg-danger">
-      <img src="<?php echo assets_url('admin') ?>/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="<?php echo assets_url('admin') ?>/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light"><?php echo setting('company_name') ?></span>
+      <span class="brand-text font-weight-light"><?php echo lang('App.company') ?></span>
+      <!-- <span class="brand-text font-weight-light"><?php echo setting('company_name') ?></span> -->
     </a>
 
 
