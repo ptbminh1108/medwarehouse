@@ -13,13 +13,13 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?php echo base_url('') ?>" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
-      </li>
+      </li> -->
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto" style="display:none">
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -216,7 +216,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?php echo userProfile(logged('id')) ?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?php echo userProfile(logged('id')) ?>" class="img-circle elevation-2" alt="User Image" style="display: none;">
         </div>
         <div class="info">
           <a href="#" class="d-block"><?= logged('name') ?></a>
