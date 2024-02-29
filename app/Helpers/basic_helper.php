@@ -100,8 +100,8 @@ if (!function_exists('urlUpload')) {
     function is_logged()
     {
       $login_token_match = false;
-	  
       $isLogged = !empty(session()->get('login')) &&  !empty(session()->get('logged')) ? (object) session()->get('logged') : false;
+	
       $_token = $isLogged && !empty(session()->get('login_token')) ? session()->get('login_token') : false;
   
       if(!$isLogged){
@@ -117,7 +117,7 @@ if (!function_exists('urlUpload')) {
         // verify login_token
         $login_token_match = (sha1($user->id.$user->password.$isLogged->time) == $_token);
       }
-  
+			
       return $isLogged && $login_token_match;
     }
   

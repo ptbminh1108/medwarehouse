@@ -611,11 +611,11 @@
     </section>
     <!-- /.content -->
 
-    <section>
+    <!-- <section>
       <div class="content-header">
         <a  href="<?php echo url("auth/register")?>"><button class="btn btn-primary"> Register form</button></a>
       </div>
-    </section>
+    </section> -->
 
 
 <?= $this->endSection() ?>

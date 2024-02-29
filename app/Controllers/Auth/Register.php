@@ -2,11 +2,11 @@
 
 namespace App\Controllers\Auth;
 
-use App\Controllers\AdminBaseController;
+use App\Controllers\BaseController;
 
 use App\Models\UserModel;
 
-class Register extends AdminBaseController
+class Register extends BaseController
 {
 
   public $title = 'Register Form';
@@ -20,7 +20,6 @@ class Register extends AdminBaseController
 
 	public function save()
 	{
-	  $this->permissionCheck('users_add');
 		postAllowed();
 
 		$id = (new UserModel)->create([
@@ -50,7 +49,7 @@ class Register extends AdminBaseController
 
 		}
 
-		model('App\Models\ActivityLogModel')->add('New User $'.$id.' Created by User:'.logged('name'), logged('id'));
+		// model('App\Models\ActivityLogModel')->add('New User $'.$id.' Created by User:'.logged('name'), logged('id'));
 		
 		return redirect()->to('users')->with('notifySuccess', 'New User Created Successfully');
 	}
@@ -73,7 +72,8 @@ class Register extends AdminBaseController
 					'id !=' => $notId,
 				])) > 0 ? true : false;
 
-		$this->responseJson(['success']);
+		
+			echo $exists ? 'false' : 'true';
 	}
 
 	

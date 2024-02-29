@@ -28,6 +28,9 @@ $lang['change_password'] = "Change Password";
 $lang['message_login_again_after_password'] = "You will need to login again after password is changed !";
 $lang['message_password_atleast_long'] = "Password must be atleast 6 characters long !";
 $lang['old_password'] = "Old Password";
+$lang['sign_up_ask'] = "Don't have an account yet ?";
+$lang['create_one'] = ' Create one.';
+
 
 /**
  * Error Pages

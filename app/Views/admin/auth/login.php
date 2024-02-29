@@ -66,6 +66,10 @@
 
       <p class="mb-1">
         <a href="<?php echo url('auth/forgetPassword?username='.post('username')) ?>" class="text-muted"><?php echo lang('App.forget_password_?') ?></a>
+       
+      </p>
+      <p class="mb-1">
+        <?php echo lang('App.sign_up_ask') ?>  <a  style="color:blue" href="<?php echo url('auth/register') ?>" ><?php echo lang('App.create_one') ?></a>
       </p>
       <!-- <p class="mb-0">
         <a href="register.html" class="text-center">Register a new membership</a>

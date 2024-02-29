@@ -55,10 +55,10 @@ class BaseController extends Controller
     }
 
 
-    public function responseJson($array){
-        return $this->output
-            ->set_content_type('application/json')
-            ->set_status_header(500)
-            ->set_output(json_encode($array));
-    }
+    // public function responseJson($array){
+    //     return $this->output
+    //         ->set_content_type('application/json')
+    //         ->set_status_header(200)
+    //         ->set_output(json_encode($array));
+    // }
 }

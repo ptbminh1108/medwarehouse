@@ -112,14 +112,14 @@
           <!-- Phone Email -->
           <div class="form-group">
             <label for="formClient-Email"><?php echo lang('App.user_email') ?></label>
-            <input type="email" class="form-control" name="email" data-rule-remote="<?php echo url('users/check') ?>" data-msg-remote="<?php echo lang('App.user_email_exists') ?>" id="formClient-Email" required placeholder="Enter email">
+            <input type="email" class="form-control" name="email" data-rule-remote="<?php echo url('auth/register/checkEmail') ?>" data-msg-remote="<?php echo lang('App.user_email_exists') ?>" id="formClient-Email" required placeholder="Enter email">
           </div>
           <!-- Phone Email -->
 
           <!-- Username  -->
           <div class="form-group">
             <label for="formClient-Username"><?php echo lang('App.user_username') ?></label>
-            <input type="text" class="form-control" data-rule-remote="<?php echo url('users/check') ?>" data-msg-remote="<?php echo lang('App.user_username_take') ?>" name="username" id="formClient-Username" required placeholder="<?php echo lang('App.user_enter_username') ?>" />
+            <input type="text" class="form-control" data-rule-remote="<?php echo url('auth/register/checkEmail') ?>" data-msg-remote="<?php echo lang('App.user_username_take') ?>" name="username" id="formClient-Username" required placeholder="<?php echo lang('App.user_enter_username') ?>" />
           </div>
           <!-- Username  -->
 

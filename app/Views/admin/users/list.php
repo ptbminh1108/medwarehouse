@@ -39,7 +39,7 @@
                   <thead>
                   <tr>
                     <th><?php echo lang('App.id') ?></th>
-                    <th><?php echo lang('App.user_image') ?></th>
+                    <!-- <th><?php echo lang('App.user_image') ?></th> -->
                     <th><?php echo lang('App.user_name') ?></th>
                     <th><?php echo lang('App.user_email') ?></th>
                     <th><?php echo lang('App.user_role') ?></th>
@@ -52,10 +52,10 @@
                   <?php foreach ($users as $row): ?>
                     <tr>
                       <td width="60"><?php echo $row->id ?></td>
-                      <td width="50" class="text-center">
+                      <!-- <td width="50" class="text-center">
                         <img src="<?php echo userProfile($row->id) ?>" width="40" height="40" alt="" class="img-avtar">
 
-                      </td>
+                      </td> -->
                       <td>
                         <?php echo $row->name ?>
                       </td>

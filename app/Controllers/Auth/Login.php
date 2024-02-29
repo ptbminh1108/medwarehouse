@@ -16,7 +16,7 @@ class Login extends BaseController
 
     public function check()
     {
-
+      
         // validate
         if (! $this->validate([
             'username' => 'required|usernameValidation[username]',
@@ -34,7 +34,7 @@ class Login extends BaseController
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-
+     
         $user = (new UserModel)->where('username', post('username'))->orWhere('email', post('username'))->first();
         
         // verify password
@@ -51,8 +51,8 @@ class Login extends BaseController
 		$login_token = sha1($user->id.$user->password.$time);
 
         $remember = post('remember_me');
-
 		if(empty($remember)){
+           
 			$array = [
 				'login' => true,
 				// saving encrypted userid and password as token in session
@@ -63,6 +63,7 @@ class Login extends BaseController
 				]
 			];
 			$this->session->set( $array );
+           
 		}else{
 
 			$data = [

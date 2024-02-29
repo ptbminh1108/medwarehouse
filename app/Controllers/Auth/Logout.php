@@ -19,7 +19,7 @@ class Logout extends BaseController
 		delete_cookie('logged');
 		delete_cookie('login_token');
 
-        return redirect()->to('auth/login')->with('notify_success', 'Logged out ');
+		return redirect()->to('auth/login')->with('notify_success', 'Logged out ')->withCookies();
     }
 
 }
